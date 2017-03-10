@@ -13,5 +13,5 @@ if (!file_exists($target)) {
     fclose($fp);
 }
 
-require('./' . $today . '/index.php');
+require($target . '/index.php');
 ?>
