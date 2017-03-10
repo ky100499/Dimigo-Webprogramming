@@ -7,25 +7,32 @@ function delTree($dir) {
     return rmdir($dir);
 }
 
+function chown_R($dir, $user) {
+    $files = array_diff(scandir($dir), array('.','..'));
+    foreach ($files as $file) {
+        (is_dir("$dir/$file")) ? chown_R("$dir/$file", $user) : chown("$dir/$file", $user);
+    }
+    return chown($dir, $user);
+}
+
 $date = new DateTime('now', new DateTimeZone('Asia/Seoul'));
 $today = isset($_GET['date']) ? $_GET['date'] : $date->format('Ymd');
-$target = './' . $today;
+$target = './projects/' . $today;
 
 $req_uri = preg_replace('/(^\/*|\?.*$)/', '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $req_uri);
 
 if ($segments[0] === "reset") {
     delTree($target);
+    header("Location: /");
 }
 
 if (!file_exists($target)) {
-    mkdir($target);
-    chown($target, $_ENV['USER']);
+    mkdir($target, 0777, true);
 
     $base_html = "<!--
     Auto-Generated file
     " . $_ENV['USER'] . " " . $today . "
-    Notice: Use location as relative location
 -->
 <!DOCTYPE html>
 <html>
@@ -34,7 +41,7 @@ if (!file_exists($target)) {
     <meta charset=\"utf-8\">
 </head>
 <body>
-    <h1>It Works!</h1>
+    <h1>Project " . $today . "</h1>
 </body>
 </html>";
 
@@ -42,8 +49,8 @@ if (!file_exists($target)) {
     $fp = fopen($idx_file, "w");
     fwrite($fp, $base_html);
     fclose($fp);
-    chown($idx_file, $_ENV['USER']);
+    chown_R("./projects/", $_ENV['USER']);
 }
 
-require($target . '/index.php');
+header("Location: /projects/" . $today);
 ?>
