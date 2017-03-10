@@ -15,7 +15,7 @@ $req_uri = preg_replace('/(^\/*|\?.*$)/', '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $req_uri);
 
 if ($segments[0] === "reset") {
-    var_dump(delTree($target));
+    delTree($target);
 }
 
 if (!file_exists($target)) {
