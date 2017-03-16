@@ -19,7 +19,7 @@ $date = new DateTime('now', new DateTimeZone('Asia/Seoul'));
 $today = isset($_GET['date']) ? $_GET['date'] : $date->format('Ymd');
 $target = './projects/' . $today;
 
-$req_uri = preg_replace('/(^\/*|\?.*$)/', '', $_SERVER['REQUEST_URI']);
+$req_uri = preg_replace('/(^\/*|[?#].*$)/', '', $_SERVER['REQUEST_URI']);
 $segments = explode('/', $req_uri);
 
 if ($segments[0] === "reset") {
