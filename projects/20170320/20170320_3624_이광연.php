@@ -1,0 +1,96 @@
+<!--
+    Auto-Generated file
+    leekwangyeon 20170320
+-->
+<!DOCTYPE html>
+<html>
+<!-- 20170320_3624_이광연 -->
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <!-- 리스트와 이미지 -->
+    <p style="border-bottom: 2px dashed green">
+        3624 이광연 리스트 & 이미지
+    </p>
+
+    <!-- Definition List (정의 목록) -->
+    <dl>
+        <dt>3624 이광연</dt>
+        <dd>한국디지털미디어고등학교 해킹방어과</dd>
+    </dl>
+
+    <hr>
+
+    <!--
+        Ordered List (순서 있는 목록)
+        Type을 지정하지 않으면 기본값은 숫자 목록
+    -->
+    <ol>
+        <li>E-비즈니스과</li>
+        <li>디지털콘텐츠과</li>
+        <li>웹프로그래밍과</li>
+        <li>해킹방어과</li>
+    </ol>
+    <ol type="A">
+        <li>E-비즈니스과</li>
+        <li>디지털콘텐츠과</li>
+        <li>웹프로그래밍과</li>
+        <li>해킹방어과</li>
+    </ol>
+    <ol type="A" start="24">
+        <li>E-비즈니스과</li>
+        <ul style="list-style-type: circle">
+            <li>E-비즈니스과</li>
+            <li>디지털콘텐츠과</li>
+            <li>웹프로그래밍과</li>
+            <li>해킹방어과</li>
+        </ul>
+        <li>디지털콘텐츠과</li>
+        <li>웹프로그래밍과</li>
+        <li>해킹방어과</li>
+    </ol>
+
+    <hr>
+
+    <!--
+        Unordered List (순서 없는 목록)
+        Type을 지정하지 않으면 기본값은 disc
+        disc, circle, square
+
+        과거: <ul type="circle">
+        현재: <ul style="list-style-type: circle">
+    -->
+    <ul>
+        <li>E-비즈니스과</li>
+        <li>디지털콘텐츠과</li>
+        <li>웹프로그래밍과</li>
+        <li>해킹방어과</li>
+    </ul>
+
+    <hr>
+
+    <!--
+        상대 경로: 현재 파일을 기준으로 상대적인 위치 지정
+        ./ -> 현재 폴더
+        ../ -> 상위 폴더
+
+        절대 경로: 서버상의 실제 위치 지정
+        /projects/20170320/ani22.gif
+    -->
+    <img src="./ani22.gif" alt="오리" title="달리는 오리">
+
+    <hr>
+
+    <marquee behavior="alternate" scrollamount="50">
+        <img src="/projects/20170320/ani22.gif">
+    </marquee>
+
+    <hr>
+
+    <marquee direction="right" scrollamount="50">
+        <img src="//localhost/projects/20170320/ani22.gif">
+    </marquee>
+</body>
+</html>
