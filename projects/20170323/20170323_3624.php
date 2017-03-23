@@ -16,7 +16,7 @@
 
     <hr>
 
-    <iframe name="h3624a" src="./h3624a.html" width="800" height="400"></iframe>
-    <iframe name="h3624b" src="./h3624b.html" width="800" height="400"></iframe>
+    <iframe name="h3624a" src="./h3624a.html" width="800" height="400" frameborder="0"></iframe>
+    <iframe name="h3624b" src="./h3624b.html" width="800" height="400" frameborder="0"></iframe>
 </body>
 </html>
