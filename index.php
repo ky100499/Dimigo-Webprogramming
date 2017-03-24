@@ -45,7 +45,7 @@ if (!file_exists($target)) {
 </body>
 </html>";
 
-    $idx_file = $target . "/index.php";
+    $idx_file = $target . "/index.html";
     $fp = fopen($idx_file, "w");
     fwrite($fp, $base_html);
     fclose($fp);

@@ -1,0 +1,83 @@
+<!--
+    Auto-Generated file
+    leekwangyeon 20170324
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연 Table</title>
+    <meta charset="utf-8">
+
+    <style>
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 20px;
+        }
+
+        .d1 {
+            float: left;
+            width: 15%;
+            height: 50px;
+            text-align: center;
+            transition: background-color .5s, color .5s;
+            border: 1px solid red;
+            margin: 10px;
+        }
+        .d1:hover {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p style="border-bottom: 2px solid blue">
+        3624 이광연 Table
+    </p>
+
+    <table style="width: 50%; /* height: 300px; */ border-collapse: collapse;">
+        <caption>테이블 제목</caption>
+        <thead>
+            <tr>
+                <!-- th: 테이블 헤더 -->
+                <th>1열</th>
+                <th>2열</th>
+                <th>3열</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- tr: 테이블의 행 -->
+            <tr>
+                <!--
+                    td: 테이블의 열
+                    colspan: 가로로 칸을 합침
+                -->
+                <td colspan="3">1행 1열</td>
+            </tr>
+
+            <tr>
+                <!-- rowspan: 세로로 칸을 합침 -->
+                <td rowspan="2">2행 1열</td>
+                <td>2행 2열</td>
+                <td>2행 3열</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">3행 2열</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Div</h2>
+    <div>
+        <div class="d1">1행 1열</div>
+        <div class="d1">1행 2열</div>
+        <div class="d1">1행 3열</div>
+        <div class="d1">1행 4열</div>
+        <div class="d1">1행 5열</div>
+    </div>
+</body>
+</html>
