@@ -1,0 +1,67 @@
+<!--
+    Auto-Generated file
+    leekwangyeon 20170331
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 Form</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2>3624 이광연</h2>
+    <form name="f3624" method="post" action="//jhserver.dimigo.hs.kr/2017/test01.php">
+        <table border="1" width="100%">
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="cname" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pw" maxlength="4" required></td>
+            </tr>
+            <tr>
+                <td>학과</td>
+                <td>
+                    <select size="1" name="dept">
+                        <option value="E-비즈니스과">EB</option>
+                        <option value="디지털컨텐츠과">DC</option>
+                        <option value="웹프로그래밍과">WP</option>
+                        <option value="해킹방어과" selected>HD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="mf" value="남자" checked> Male
+                    <input type="radio" name="mf" value="여자"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>선택과목</td>
+                <td>
+                    <input type="checkbox" name="sub[]" value="국어" checked> 국어
+                    <input type="checkbox" name="sub[]" value="수학-가" checked> 수학-가
+                    <input type="checkbox" name="sub[]" value="수학-나"> 수학-나
+                    <input type="checkbox" name="sub[]" value="영어" checked> 영어
+                    <input type="checkbox" name="sub[]" value="과학탐구" checked> 과탐
+                    <input type="checkbox" name="sub[]" value="사회탐구"> 사탐
+                    <input type="checkbox" name="sub[]" value="직업탐구"> 직탐
+                </td>
+            </tr>
+            <tr>
+                <td>요일</td>
+                <td><input type="date" name="tdate"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #ff3624"><input type="hidden" name="hn" value="3624"></td>
+                <td>
+                    <input type="submit" value="전송">
+                    <input type="reset" value="다시">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
