@@ -1,0 +1,32 @@
+/* 3624 CSS */
+
+body {
+    background-color: lightblue;
+    text-decoration: underline;
+}
+
+/*
+** Margin, Padding
+**
+** margin: top right bottom left;
+** Ex) margin: 1px 2px 3px 4px;
+**
+** margin: top right/left bottom;
+** Ex) margin: 1px 2px 3px;
+**
+** margin: top/bottom right/left;
+** Ex) margin: 1px 2px;
+**
+** margin: top/right/bottom/left;
+** Ex) margin: 1px;
+*/
+
+#b02 {
+    margin: 10px;
+    margin-left: 50px;
+    background-color: green;
+}
+#b03 {
+    margin: 20px 50px 10px 30px;
+    background-color: pink;
+}
