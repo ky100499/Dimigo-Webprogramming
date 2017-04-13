@@ -1,0 +1,105 @@
+#wrap {
+    width: 800px;
+    height: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    padding: 10px;
+
+    position: relative;
+
+    background-color: lightblue;
+}
+
+#header {
+    background-color: #ee008c;
+
+    padding: 5px;
+    margin: 10px;
+
+    height: 100px;
+}
+
+#header:hover {
+    background-color: white;
+    background-image: url('http://jhserver.dimigo.hs.kr/dimigo.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#login {
+    background-color: lightgreen;
+
+    width: 480px;
+    height: 70px;
+
+    padding: 10px;
+    margin: 10px;
+
+    float: left;
+}
+
+#side {
+    background-color: lightyellow;
+
+    width: 250px;
+    height: 70px;
+
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+
+    float: right;
+}
+
+#content {
+    clear: both;
+
+    height: 480px;
+
+    padding: 5px;
+    margin: 10px;
+
+    background-image: url("http://jhserver.dimigo.hs.kr/school3.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+    text-decoration: overline;
+
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+#popup {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+
+    border: 1px groove red;
+    border-radius: 20px;
+    background-color: ivory;
+
+    width: 200px;
+    height: 200px;
+}
+
+#side2 {
+    position: absolute;
+    top: 0px;
+    left: 840px;
+
+    width: 150px;
+    height: 800px;
+
+    border: 1px solid #000;
+}
