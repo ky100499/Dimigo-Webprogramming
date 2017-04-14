@@ -15,6 +15,9 @@ function chown_R($dir, $user) {
     return chown($dir, $user);
 }
 
+$user = json_decode(file_get_contents("./userinfo.json"));
+$static = json_decode(file_get_contents("./load_static.json"));
+
 $date = new DateTime('now', new DateTimeZone('Asia/Seoul'));
 $today = isset($_GET['date']) ? $_GET['date'] : $date->format('Ymd');
 $target = './projects/' . $today;
@@ -32,25 +35,34 @@ if (!file_exists($target)) {
 
     $base_html = "<!--
     Auto-Generated file
-    " . $_ENV['USER'] . " " . $today . "
+    " . $user->name . " " . $today . "
 -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>" . $today . "</title>
+    <title>" . $user->code . " " . $user->name . "</title>
     <meta charset=\"utf-8\">
+    "
+    . ($static->css ? "
+    <link rel='stylesheet' href='./" . $today . "_" . $user->code . ".css'>" : "") .
+    ($static->js ? "
+    <script src='./" . $today . "_" . $user->code . ".js'></script>" : "") . "
 </head>
 <body>
     <h1>Project " . $today . "</h1>
 </body>
 </html>";
 
-    $idx_file = $target . "/index.html";
+    $idx_file = $target . "/" . $today . "_" . $user->code . ".html";
     $fp = fopen($idx_file, "w");
     fwrite($fp, $base_html);
     fclose($fp);
+
+    if ($static->css) fclose(fopen($target . "/" . $today . "_" . $user->code . ".css", "w"));
+    if ($static->js) fclose(fopen($target . "/" . $today . "_" . $user->code . ".js", "w"));
+
     chown_R("./projects/", $_ENV['USER']);
 }
 
-header("Location: /projects/" . $today);
+header("Location: /projects/" . $today . "/" . $today . "_" . $user->code . ".html");
 ?>
