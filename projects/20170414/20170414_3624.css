@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap_3624 {
+    width: 700px;
+    height: 200px;
+
+    position: relative;
+
+    background-color: #675c47;
+
+    margin: 0 auto;
+    padding: 10px;
+
+    border: 1px solid #000;
+}
+
+#login_3624 {
+    position: absolute;
+
+    top: 10px;
+    right: -200px;
+
+    width: 180px;
+    height: 150px;
+
+    padding: 5px;
+
+    background-color: #87CEEB;
+}
+
+#side1_3624, #side2_3624, #side3_3624, #side4_3624 {
+    width: 150px;
+    height: 150px;
+
+    padding: 5px;
+    margin: 5px;
+
+    background-color: #dedede;
+
+    border: 1px dashed;
+
+    float: left;
+
+    text-align: center;
+}
+#side1_3624 {
+    border-color: #ff0000;
+}
+#side2_3624 {
+    border-color: #00ff00;
+}
+#side3_3624 {
+    border-color: #0000ff;
+}
+#side4_3624 {
+    border-color: #ff00ff;
+
+    background-image: url("http://jhserver.dimigo.hs.kr/dimigo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.u_bar_3624 {
+    border-bottom: 1px solid #0000ff;
+    font-size: 10pt;
+    font-weight: bold;
+}
+#wrap_3624 > div > span {
+    color: #000;
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+#foot_3624 {
+    clear: both;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 678px;
+    padding: 5px 0 8px;
+    margin: 5px;
+}
+
+form > table {
+    width: 100%;
+    border-bottom: 1px solid #0000ff;
+}
