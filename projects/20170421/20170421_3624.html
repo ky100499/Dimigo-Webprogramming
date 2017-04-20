@@ -1,0 +1,70 @@
+<!-- 3624 이광연 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>해킹방어과 3624 Layout</title>
+    <meta charset="utf-8">
+
+    <link rel='stylesheet' href='./20170421_3624.css'>
+</head>
+<body>
+    <div id="wrap_3624">
+        <div id="header_3624">
+            2017년 4월 21일 금요일 해킹방어과 3624 이광연
+        </div>
+        <div id="login_3624">
+            <fieldset>
+                <form method="post" action="http://jhserver.dimigo.hs.kr/2017/test06.php" target="_blank">
+                    ID: <input type="text" name="s_id" size="10" required>
+                    PW: <input type="password" name="pw" size="20" required>
+                    <input type="hidden" name="s_hd" value="3624">
+                    <input type="submit" value="로그인">
+                </form>
+            </fieldset>
+        </div>
+        <div id="side_3624">
+            <ul>
+                <li><a href="" target="_self">Home</a></li>
+                <li><a href="http://jhserver.dimigo.biz" target="f3624">웹플</a></li>
+                <li><a href="http://jhserver.dimigo.hs.kr/test06.jpg" target="f3624">문제</a></li>
+                <li class="no-active-3624"><a href="http://jhserver.dimigo.hs.kr/thelove.mp4" target="f3624">3624</a></li>
+            </ul>
+        </div>
+        <div id="content_3624">
+            <iframe src="" name="f3624"></iframe>
+        </div>
+        <div id="footer_3624">
+            <div style="display: inline-block">
+                <div style="font-size: 9pt; margin: 5px 10px">
+                    <address>(우 15255) 경기도 안산시 단원구 사세충열로 94</address>
+                    한국디지털미디어고등학교
+                </div>
+                <div style="font-size: 10pt; font-weight: bold; margin: 10px">
+                    <span style="color: yellow">해킹방어과</span> 3624 이광연
+                </div>
+            </div>
+            <img src="http://jhserver.dimigo.hs.kr/dimigo2.png" style="float: right">
+            <div style="clear: both;"></div>
+        </div>
+        <div id="popup_3624">
+            <img src="http://jhserver.dimigo.hs.kr/school2.jpg" usemap="#m3624">
+            <map name="m3624">
+                <area shape="rect" coords="60,50,240,80" href="http://jhserver.dimigo.hs.kr/school2.jpg" target="_blank">
+            </map>
+        </div>
+        <div id="abs_3624">
+            3624 Color
+            <hr>
+            <table id="table_3624">
+            </table>
+        </div>
+    </div>
+    <script>
+        var table = document.getElementById("table_3624"), table_html = "";
+        for (var i = 0; i < 16; i++) {
+            table_html = "<tr><td style='background-color: rgb(" + (17 * i) + ", " + (17 * i) + ", " + (17 * i) + ")'></td></tr>" + table_html
+        }
+        table.innerHTML = table_html;
+    </script>
+</body>
+</html>
