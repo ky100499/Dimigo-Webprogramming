@@ -1,0 +1,64 @@
+/* 3624 CSS */
+
+#d1 {
+    position: relative;
+
+    width: 705px;
+    height: 850px;
+
+    padding: 20px;
+}
+
+#d2 {
+    width: 680px;
+    height: 850px;
+
+    background-image: url("http://jhserver.dimigo.hs.kr/s0.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#d3 {
+    float: left;
+
+    width: 470px;
+    height: 131px;
+
+    font-style: italic;
+    font-size: 20pt;
+
+    padding-top: 30px;
+
+    text-align: center;
+}
+
+#d4 {
+    clear: both;
+
+    margin: 40px;
+
+    font-size: 18pt;
+
+    line-height: 160%;
+}
+
+.t1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25pt;
+}
+
+#foot {
+    position: absolute;
+    line-height: 160%;
+    padding: 40px;
+}
+
+li {
+    margin: 0 5px;
+}
+span.bold {
+    font-weight: bold;
+}
