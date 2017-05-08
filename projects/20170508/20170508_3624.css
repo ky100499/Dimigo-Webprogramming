@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 8px;
+}
+
+#wrap {
+    width: 705px;
+    height: 850px;
+}
+
+#main {
+    width: 650px;
+    height: 800px;
+
+    padding: 30px 80px;
+
+    background-image: url("http://jhserver.dimigo.hs.kr/b0.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#information {
+    margin-top: 30px;
+
+    font-size: 1.5em;
+}
+#information img {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+#list {
+    margin-top: 30px;
+    line-height: 1.5em;
+}
+#list > span.bold {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+#list > ul {
+    list-style-type: none;
+    margin-left: 25px;
+}
+#list > ul > li {
+  text-indent: -5px;
+}
+#list > ul > li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+#answer {
+    font-size: 1.3em;
+    margin: 10px 50px 0;
+}
