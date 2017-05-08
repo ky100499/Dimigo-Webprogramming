@@ -48,11 +48,11 @@ body {
     margin-left: 25px;
 }
 #list > ul > li {
-  text-indent: -5px;
+    text-indent: -5px;
 }
 #list > ul > li:before {
-  content: "- ";
-  text-indent: -5px;
+    content: "- ";
+    text-indent: -5px;
 }
 
 #answer {
