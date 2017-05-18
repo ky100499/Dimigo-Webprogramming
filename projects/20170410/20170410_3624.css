@@ -54,9 +54,9 @@ tr:nth-child(even) {
     ** Position
     **
     ** • Static - 기본값
-    ** • Absolute - Static이 아닌 상위 노드를 기준으로 절대 좌표 설정
-    ** • Fixed -
-    ** • Relative
+    ** • Absolute - Static이 아닌 상위 노드를 기준으로 위치 설정
+    ** • Fixed - 브라우저의 표시 영역을 기준으로 위치 설정
+    ** • Relative - Static과 유사. top, bottom, left, right 속성 설정 가능. 설정 시 Static일 때의 기본 위치를 기준으로 위치가 지정됨
     */
     position: relative;
     top: 100px;
@@ -77,9 +77,6 @@ tr:nth-child(even) {
     margin: 20px;
     width: 100px;
     height: 100px;
-}
-#d4 {
-    /**/
 }
 #d5 {
     clear: both;

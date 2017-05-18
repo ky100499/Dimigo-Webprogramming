@@ -33,11 +33,7 @@ if ($segments[0] === "reset") {
 if (!file_exists($target)) {
     mkdir($target, 0777, true);
 
-    $base_html = "<!--
-    Auto-Generated file
-    " . $user->name . " " . $today . "
--->
-<!DOCTYPE html>
+    $base_html = "<!DOCTYPE html>
 <html>
 <head>
     <title>" . $user->code . " " . $user->name . "</title>
