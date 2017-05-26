@@ -1,0 +1,190 @@
+<!-- 20170526_3624a.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        /*
+        ** 관계 연산자
+        **   ==  : 값이 같으면 true
+        **   === : 값과 타입 모두 같아야 true
+        **   !=  : 값이 다르면 true
+        **   !== : 값이나 타입이 다르면 true
+        **
+        ** 논리 연산자
+        **   && : and
+        **   || : or
+        **   !  : not
+        **
+        ** 증감 연산자
+        **   i) 후위 연산 : 대입 -> 연산
+        **      foo++
+        **      bar--
+        **   ii) 전위 연산 : 연산 -> 대입
+        **      ++foo
+        **      --bar
+        **
+        ** 대입 연산자
+        **   +=, -=, *=, /=, %=
+        **
+        ** 기타 연산자
+        **   in         : asdf
+        **   instanceof : asdf
+        **   typeof     : asdf
+        **
+        ** 삼항 연산자
+        **   (condition) ? (true) : (false)
+        **
+        ** 비트 연산자
+        **   &       : and
+        **   |       : or
+        **   ^       : xor
+        **   << / >> : shift
+        **   ~       : not
+        **
+        ** 제어문
+        **   if / else if / else
+        **   for (init; condition; increment) {
+        **       code...
+        **   }
+        **   while (condition) {
+        **       code...
+        **   }
+        **   do {
+        **       code...
+        **   } while (condition)
+        **
+        **   continue : 해당 루프를 건너뛰고 다음 단계로 진행
+        **   break    : 루프를 종료
+        */
+
+        // 관계 연산자
+        document.write(1 == "1");       // true
+        document.write("<hr>");
+        document.write(1 === "1");      // false
+        document.write("<hr>");
+        document.write(1 !== "1");      // true
+        document.write("<hr>");
+
+        // 논리 연산자
+        document.write(1 < 3 && 3 < 5); // true
+        document.write("<hr>");
+        if (1 < 3 && 3 < 5) {
+            console.log("Hello");       // alert 귀찮아서 바꿈
+        }
+
+        // 증감 연산자
+        a = 1;
+        k = a++;    // k에 1을 대입한 뒤 a를 증가시킴
+        document.write(k);
+        document.write("<hr>");
+
+        // 대입 연산자
+        a += 1;     // a = a + 1
+        a %= 2;     // a = a % 2
+
+        // 기타 연산자
+        var point = { x: 1, y: 1 };
+        var a = [1, 2, 3];
+        var d = new Date();
+
+        document.write("기타 연산자 3624 이광연");
+        document.write("<hr>");
+
+        var p1 = "x" in point;
+        document.write(p1);
+        document.write("<hr>");
+
+        var p2 = "toString" in point;
+        document.write(p2);
+        document.write("<hr>");
+
+        document.write(d instanceof Date);
+        document.write("<hr>");
+        document.write(d instanceof Number);
+        document.write("<hr>");
+
+        document.write(typeof d);
+        document.write("<hr>");
+        document.write(typeof 1);
+        document.write("<hr>");
+        document.write(typeof "1");
+        document.write("<hr>");
+        document.write(typeof a);
+        document.write("<hr>");
+        document.write(typeof function() {});
+        document.write("<hr>");
+
+        // 삼항 연산자
+        console.log(3 < 5 ? "T" : "F");
+
+        // 비트 연산자
+        document.write(3 & 5);      // 011 & 101 -> 001 = 1
+        document.write(3 | 5);      // 011 | 101 -> 111 = 7
+        document.write(3 ^ 5);      // 011 ^ 101 -> 110 = 6
+        document.write(3 << 2);     // 11 << 2   -> 1100 = 12
+        document.write("<hr>");
+
+        // Swap
+        a = 3, b = 5;
+        document.write(a, b);
+        document.write("<hr>");
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        document.write(a, b);
+        document.write("<hr>");
+
+        // 제어문
+        document.write("제어문 3624<hr>");
+
+        var j = 26;
+        if (j < 10) {
+            document.write("F");
+        } else if (j < 30) {
+            document.write("Pass");
+        } else {
+            document.write("No");
+        }
+        document.write("<hr>");
+
+        for (var i = 0; i < 10; i++) {
+            if (i % 2 == 0) continue;
+            if (i == 7) break;
+            document.write(i + "<br>");
+        }
+        document.write("<hr>");
+
+        var k = 0;
+        while (k < 0) {
+            document.write(k++ + "<br>");
+        }
+        document.write("<hr>");
+
+        var k = 0;
+        do {
+            document.write(k++ + "<br>");
+        } while (k < 0);
+        document.write("<hr>");
+
+        function f3624() {
+            var t1 = h3624.h24.value,
+                t2 = document.getElementById("h6").value
+                t3 = document.forms['h3624']['h24'].value;
+
+            t2 = parseInt(t2);
+            alert(t2 + "까지의 합은 " + (t2 * (t2 + 1) / 2) + "입니다");
+        }
+    </script>
+</head>
+<body>
+    <p>20170526 3624</p>
+
+    <form name="h3624" onsubmit="return false;">
+        <input type="text" name="h24" id="h6">
+        <button onclick="f3624()">확인</button>
+    </form>
+</body>
+</html>
