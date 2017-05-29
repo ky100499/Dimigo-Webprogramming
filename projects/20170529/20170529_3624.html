@@ -28,7 +28,6 @@
                 board[i] = Array(size);
             }
             for (var i = 0; i < size * size; i++) {
-                console.log(x, y);
                 board[x][y] = i + 1;
 
                 x -= 1;
@@ -45,8 +44,6 @@
                     if (y < 0) y += size;
                 }
             }
-
-            console.log(board);
 
             res = "";
             for (var i = 0; i < size; i++) {
