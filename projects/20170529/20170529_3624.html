@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function f3624() {
+            var size = document.getElementById("i3624").value;
+
+            if (size.match(/^\d+$/)) {
+                size = parseInt(size);
+            } else {
+                alert(size + " is not a valid number!");
+                return false;
+            }
+
+            if (size % 2 == 0) {
+                alert("홀수만 입력하세요");
+                return false;
+            }
+
+            var board = Array(size),
+                x = 0,
+                y = Math.floor(size / 2);
+
+            for (var i = 0; i < size; i++) {
+                board[i] = Array(size);
+            }
+            for (var i = 0; i < size * size; i++) {
+                console.log(x, y);
+                board[x][y] = i + 1;
+
+                x -= 1;
+                y += 1;
+
+                if (x < 0) x += size;
+                if (y >= size) y -= size;
+
+                if (board[x][y] !== undefined) {
+                    x += 2;
+                    y -= 1;
+
+                    if (x >= size) x -= size;
+                    if (y < 0) y += size;
+                }
+            }
+
+            console.log(board);
+
+            res = "";
+            for (var i = 0; i < size; i++) {
+                res += "<tr>";
+                for (var j = 0; j < size; j++) {
+                    res += "<td>" + board[i][j] + "</td>";
+                }
+                res += "</tr>";
+            }
+            document.getElementById("result").innerHTML = res;
+        }
+    </script>
+
+    <style>
+        table, table * {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <p style="border-top: solid 5px red">3624 이광연</p>
+
+    INPUT: <input type="text" id="i3624">
+    <button onclick="f3624()">확인</button>
+
+    <table id="result" style="margin-top: 20px;"></table>
+</body>
+</html>
