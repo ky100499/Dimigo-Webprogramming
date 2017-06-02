@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function f3624() {
+            var size = document.getElementById("h24").value;
+
+            if (!size.match(/^\d+$/)) {
+                alert("자연수를 입력하세요");
+                return;
+            }
+            size = parseInt(size);
+
+            var h3624 = Array(size);
+            for (var i = 0; i < size; i++) {
+                h3624[i] = Array(size);
+            }
+
+            coord = {x: 0, y: 0};
+            directions = {top: 1, right: 2, bottom: 3, left: 4};
+            direction = directions.right;
+            num = 1;
+
+            cont = true;
+            while (cont) {
+                h3624[coord.x][coord.y] = num++;
+
+                switch (direction) {
+                    case directions.top:
+                        if (coord.x <= 0 || h3624[coord.x - 1][coord.y] !== undefined) {
+                            direction = directions.right;
+                        }
+                        break;
+                    case directions.right:
+                        if (coord.y >= size - 1 || h3624[coord.x][coord.y + 1] !== undefined) {
+                            direction = directions.bottom;
+                        }
+                        break;
+                    case directions.bottom:
+                        if (coord.x >= size - 1 || h3624[coord.x + 1][coord.y] !== undefined) {
+                            direction = directions.left;
+                        }
+                        break;
+                    case directions.left:
+                        if (coord.y <= 0 || h3624[coord.x][coord.y - 1] !== undefined) {
+                            direction = directions.top;
+                        }
+                        break;
+                }
+
+                switch (direction) {
+                    case directions.top:
+                        coord.x -= 1;
+                        break;
+                    case directions.right:
+                        coord.y += 1;
+                        break;
+                    case directions.bottom:
+                        coord.x += 1;
+                        break;
+                    case directions.left:
+                        coord.y -= 1;
+                        break;
+                }
+                if (num > size ** 2) break;
+            }
+
+            res = "";
+            for (var i = 0; i < size; i++) {
+                res += "<tr>";
+                for (var j = 0; j < size; j++) {
+                    res += "<td>" + h3624[i][j] + "</td>";
+                }
+                res += "</tr>";
+            }
+            document.getElementById("result").innerHTML = res;
+        }
+    </script>
+
+    <style>
+        table, table * {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 3px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <p style="border-top: 3px solid red">3624 이광연</p>
+    INPUT: <input type="text" id="h24">
+    <input type="button" onclick="f3624()" value="확인">
+    <table id="result" style="margin-top: 20px;"</table>
+</body>
+</html>
