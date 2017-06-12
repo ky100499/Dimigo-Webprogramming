@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function f() {
+            alert("Welcome!");
+        }
+
+        // 객체
+        function student(name, dept) {
+            this.name = name;
+            this.dept = dept;
+
+            this.st_method = function() {
+                document.write("이름: " + this.name);
+                document.write(" 학과: " + this.dept);
+            }
+        }
+
+        stu1 = new student("이광연", "해킹방어과");
+        stu1.st_method();
+
+        var stu2 = {
+            name: "이광연",
+            dept: "해킹방어과",
+            st_method2: function() {
+                document.write("이름: " + this.name);
+                document.write(" 학과: " + this.dept);
+            }
+        };
+
+        stu2.st_method2();
+
+        document.write("<hr>");
+
+        document.write(typeof stu1);
+        document.write(typeof stu2);
+
+        var arr = ["3624", "3625", "3626", "3627"];
+
+        for (var i in arr) {
+            document.write(arr[i] + "<br>");
+        }
+
+        document.write("<hr>");
+        document.write(arr.length);
+        document.write("<hr>");
+        document.write(arr.join());
+        document.write("<hr>");
+        document.write(arr.slice(1, 3));
+        document.write("<hr>");
+        document.write(arr.splice(1, 3, "3637"));
+        document.write("<hr>");
+        document.write(arr.toString());
+        document.write(typeof arr.toString());
+        document.write(typeof arr.join());
+        document.write(typeof arr);
+
+        document.write("<hr>");
+
+        var d = new Date();
+        document.write(d);
+        document.write("<hr>");
+        document.write(d.getFullYear());
+        document.write("<hr>");
+        document.write(d.getMonth());
+        document.write("<hr>");
+        document.write(d.getDate());
+        document.write("<hr>");
+        document.write(d.getDay());
+        document.write("<hr>");
+        document.write(d.getTime());
+
+        var now = new Date();
+        var after = new Date(2017, 10, 17);
+        var interval = after - now;
+
+        interval /= 1000 * 60 * 60 * 24;
+        interval = Math.floor(interval);
+        document.write("<hr>D-"+interval);
+    </script>
+</head>
+<body onload="f()">
+    <p id="cl">Clock</p>
+    <button onclick="clearInterval(myClock)">Stop</button>
+    <script>
+        var myClock = setInterval(function() {
+            document.getElementById("cl").innerHTML = (new Date()).toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>
