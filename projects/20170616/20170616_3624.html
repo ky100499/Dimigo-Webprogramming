@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        var c = 0,
+            t,
+            timer_on = false;
+
+        function timerCount() {
+            document.getElementById("txt").value = c++;
+            t = setTimeout(timerCount, 1000);
+        }
+
+        function startc() {
+            if (!timer_on) {
+                timer_on = true;
+                timerCount();
+            }
+        }
+
+        function stopc() {
+            timer_on = false;
+            clearTimeout(t);
+        }
+
+        function func1() {
+            var1 = setTimeout(function() {
+                alert("Hello");
+            }, 3000);
+        }
+
+        function func2() {
+            var2 = setInterval(function() {
+                alert("Hello");
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <p style="border: 2px solid red">
+        3624
+    </p>
+    <input type="text" id="txt">
+    <button onclick="startc()">Start</button>
+    <button onclick="stopc()">Stop</button>
+
+    <hr>
+
+    <button onclick="func1()">Try it 1</button>
+    <button onclick="func2()">Try it 2</button>
+
+    <button onclick="clearInterval(var2)">Clear</button>
+</body>
+</html>

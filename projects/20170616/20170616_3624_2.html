@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        var c = 0,
+            t,
+            timer_on = false;
+
+        function timerCount() {
+            if (c < 0) {
+                alert("End");
+                return;
+            }
+            document.getElementById("txt").value = c--;
+            t = setTimeout(timerCount, 1000);
+        }
+
+        function startc() {
+            c = document.getElementById("txt").value;
+            if (!c.match(/^\d+$/)) {
+                c = parseInt(c);
+                alert("Int only");
+                return false;
+            }
+
+            if (!timer_on) {
+                timer_on = true;
+                timerCount();
+            }
+        }
+
+        function stopc() {
+            timer_on = false;
+            clearTimeout(t);
+        }
+
+        function func1() {
+            var1 = setTimeout(function() {
+                alert("Hello");
+            }, 3000);
+        }
+
+        function func2() {
+            var2 = setInterval(function() {
+                alert("Hello");
+            }, 3000);
+        }
+
+        document.write("<hr>");
+
+        var x = 2.5;
+        document.write(Math.ceil(x));
+        document.write("<hr>");
+        document.write(Math.floor(x));
+        document.write("<hr>");
+        document.write(Math.round(x));
+        document.write("<hr>");
+        document.write(Math.sqrt(x));
+        document.write("<hr>");
+        document.write(Math.abs(x));
+        document.write("<hr>");
+        document.write(Math.PI);
+        document.write("<hr>");
+        document.write(Math.E);
+        document.write("<hr>");
+        // {{ start }} ~ {{ end }} 범위 내의 난수 발생
+        // Math.floor(Math.random() * (end - start + 1)) + start
+        document.write(Math.floor(Math.random() * (10)) + 1);
+        document.write("<hr>");
+
+        document.write(str = "KOREA DIGITAL MEDIA HIGH SCHOOL");
+        document.write("<hr>");
+        document.write(typeof str);
+        document.write("<hr>");
+        document.write(str.length);
+        document.write("<hr>");
+        document.write(str.charAt(7));
+        document.write("<hr>");
+        document.write(str.indexOf("o"));
+        document.write("<hr>");
+        document.write(str.lastIndexOf("I"));
+        document.write("<hr>");
+        document.write(str.substr(2, 5));
+        document.write("<hr>");
+        document.write(str.substring(2, 7));
+        document.write("<hr>");
+        document.write(str.split(" "));
+        document.write("<hr>");
+        document.write(str.concat("TEST"));
+        document.write("<hr>");
+
+        var arr = ["1", "2", "3"];
+        document.write(arr + " | " + arr.join("or").length);
+        document.write("<hr>");
+    </script>
+</head>
+<body>
+    <p style="border: 2px solid red">3624</p>
+
+    <input type="text" id="txt" placeholder="카운터 시간 입력 Ex) 10">
+    <button onclick="startc()">Start</button>
+    <button onclick="stopc()">Stop</button>
+
+    <hr>
+
+    <button onclick="func1()">Try it 1</button>
+    <button onclick="func2()">Try it 2</button>
+
+    <button onclick="clearInterval(var2)">Clear</button>
+</body>
+</html>
