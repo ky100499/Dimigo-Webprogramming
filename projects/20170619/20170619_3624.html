@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function wopen() {
+            var mywin = window.open(
+                "a3624.html",
+                "mw",
+                "width=300 height=300"
+            );
+        }
+
+        function openlayer(id, tpos, lpos) {
+            document.getElementById("layerpop").style.top = tpos+"px";
+            document.getElementById("layerpop").style.left = lpos+"px";
+            document.getElementById("layerpop").style.display = "block";
+        }
+        function closelayer(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+
+    <style>
+        #layerpop {
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: yellow;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+            display: none;
+        }
+
+        .close {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="wopen()">새창열기</button>
+
+    <hr>
+
+    <a href="#;" onclick="openlayer('layerpop', 200, 200); return false">열기</a>
+    <div id="layerpop">
+        <b>내용</b>
+        <ol>
+            <li>3624 이광연</li>
+            <li>레이어 팝업 열기 openlayer()</li>
+            <li>레이어 팝업 닫기 closelayer()</li>
+        </ol>
+        <a href="#;" class="close" onclick="closelayer('layerpop'); return false">닫기</a>
+    </div>
+</body>
+</html>
