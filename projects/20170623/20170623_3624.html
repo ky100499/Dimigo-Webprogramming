@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function lochange(form) {
+            if (form.lo.selectedIndex != 0) {
+                location.replace(form.lo.options[form.lo.selectedIndex].value);
+            }
+        }
+
+        function bgchange(form) {
+            var color = form.bg.options[form.bg.selectedIndex].value;
+
+            if (form.bg.selectedIndex != 0) {
+                document.getElementsByTagName("body")[0].style.backgroundColor = color;
+                document.getElementById("bg").style.backgroundColor = color;
+            }
+
+            switch (color) {
+                case "red":
+                case "green":
+                case "blue":
+                    document.getElementById("bg").style.color = "white";
+                    break;
+                default:
+                    document.getElementById("bg").style.color = "black";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="border: 2px solid red">3624 이광연</p>
+
+    <hr>
+
+    <form>
+        <select name="lo" size="1" onchange="lochange(this.form)">
+            <option>하이퍼링크</option>
+            <option value="http://www.dimigo.hs.kr/">한국디지털미디어고</option>
+            <option value="http://dimigo.in">디미고인</option>
+        </select>
+
+        <hr>
+
+        <select name="bg" id="bg" size="1" onchange="bgchange(this.form)">
+            <option>배경색상</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+    </form>
+</body>
+</html>
