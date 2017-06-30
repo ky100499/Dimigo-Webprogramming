@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <script>
+        function f1() {
+            var p = document.getElementById("p1");
+            if (p.style.display == "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+
+        function f2() {
+            var p = document.getElementsByTagName("p");
+            if (p[1].style.visibility == "hidden") {
+                p[1].style.visibility = "visible";
+            } else {
+                p[1].style.visibility = "hidden";
+            }
+        }
+
+        function f3() {
+            var x = document.createElement("button");
+            var t = document.createTextNode("merong");
+            x.appendChild(t);
+            document.body.appendChild(x);
+        }
+
+        document.write(eval(1+2+3));
+        document.write(eval("1+2+3"));
+        eval(alert("Hello"));
+    </script>
+</head>
+<body>
+    <p id="p1">한국디지털미디어고 해킹방어과 이광연</p>
+    <p id="p2">한국디지털미디어고 해킹방어과 이광연</p>
+    <p id="p3">한국디지털미디어고 해킹방어과 이광연</p>
+    <p id="p4">한국디지털미디어고 해킹방어과 이광연</p>
+
+    <button onclick="f1()">F1</button>
+    <button onclick="f2()">F2</button>
+    <button onclick="f3()">F3</button>
+</body>
+</html>
