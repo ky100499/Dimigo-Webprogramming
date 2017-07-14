@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3624 이광연</title>
+    <meta charset="utf-8">
+
+    <style>
+        #f-text {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).on("mousemove", function(e) {
+            $("#f-text").css("top", e.clientY+"px").css("left", e.clientX+"px");
+        });
+    </script>
+</head>
+<body>
+    <div id="f-text">3624 이광연</div>
+</body>
+</html>
