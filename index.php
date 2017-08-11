@@ -15,6 +15,8 @@ function chown_R($dir, $user) {
     return chown($dir, $user);
 }
 
+$extension = "php";
+
 $user = json_decode(file_get_contents("./userinfo.json"));
 $static = json_decode(file_get_contents("./load_static.json"));
 
@@ -49,7 +51,7 @@ if (!file_exists($target)) {
 </body>
 </html>";
 
-    $idx_file = $target . "/" . $today . "_" . $user->code . ".html";
+    $idx_file = $target . "/" . $today . "_" . $user->code . "." . $extension;
     $fp = fopen($idx_file, "w");
     fwrite($fp, $base_html);
     fclose($fp);
@@ -57,8 +59,8 @@ if (!file_exists($target)) {
     if ($static->css) fclose(fopen($target . "/" . $today . "_" . $user->code . ".css", "w"));
     if ($static->js) fclose(fopen($target . "/" . $today . "_" . $user->code . ".js", "w"));
 
-    chown_R("./projects/", $_ENV['USER']);
+    chown_R("./projects/", "leekwangyeon");
 }
 
-header("Location: /projects/" . $today . "/" . $today . "_" . $user->code . ".html");
+header("Location: /projects/" . $today . "/" . $today . "_" . $user->code . "." . $extension);
 ?>
