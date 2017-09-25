@@ -1,5 +1,7 @@
 <?php
-$dbinfo = json_decode(file_get_contents("dbinfo.json"));
+define("ROOTDIR", $_SERVER['DOCUMENT_ROOT']);
+
+$dbinfo = json_decode(file_get_contents(ROOTDIR . "/dbinfo.json"));
 $conn = mysqli_connect(
     $dbinfo->host,
     $dbinfo->user,
