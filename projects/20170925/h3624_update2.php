@@ -9,6 +9,7 @@ $conn = mysqli_connect(
     $dbinfo->dbname
 ) or die("Cannot connect database");
 
+$id = $_POST['id'];
 $s_num = $_POST['h01'];
 $s_name = $_POST['h02'];
 $pwd = $_POST['h03'];
@@ -16,11 +17,9 @@ $dept = $_POST['h04'];
 $gender = $_POST['h05'];
 
 $query = "
-    INSERT INTO students
-    (snum, sname, pw, dept, gender)
-    VALUES (
-        '$s_num', '$s_name', PASSWORD('$pwd'), '$dept', '$gender'
-    );
+    UPDATE students
+    SET snum='$s_num', sname='$s_name', pw=PASSWORD('$pwd'), dept='$dept', gender='$gender'
+    WHERE id=$id;
 ";
 if (mysqli_query($conn, $query)) {
     header("Location: ./h3624_select.php");

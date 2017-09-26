@@ -9,23 +9,15 @@ $conn = mysqli_connect(
     $dbinfo->dbname
 ) or die("Cannot connect database");
 
-$s_num = $_POST['h01'];
-$s_name = $_POST['h02'];
-$pwd = $_POST['h03'];
-$dept = $_POST['h04'];
-$gender = $_POST['h05'];
+$query = sprintf("
+    DELETE FROM students
+    WHERE id=%s
+", $_GET['id']);
 
-$query = "
-    INSERT INTO students
-    (snum, sname, pw, dept, gender)
-    VALUES (
-        '$s_num', '$s_name', PASSWORD('$pwd'), '$dept', '$gender'
-    );
-";
 if (mysqli_query($conn, $query)) {
     header("Location: ./h3624_select.php");
 } else {
-    echo "Error while inserting data: " . $conn->error;
+    echo "Error while deleting data: " . $conn->error;
 }
 $conn->close();
 ?>
